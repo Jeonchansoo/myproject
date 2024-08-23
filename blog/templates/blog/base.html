@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <title> {% block title %} {% endblock %}</title> <!-- 'blok'를 'block'으로 수정 -->
+    <link href="{% static 'css/blog.css' %}" rel="stylesheet"> <!-- 큰따옴표를 작은따옴표로 수정 -->
+</head>
+<body>
+    <div id="content"> <!-- 불필요한 공백 제거 -->
+        {% block content %} <!-- 'blok'를 'block'으로 수정 -->
+        {% endblock %}
+    </div>
+    <div id="sidebar"> <!-- 불필요한 공백 제거 -->
+        <h2>My blog</h2> <!-- 불필요한 공백 제거 -->
+        <p>This is my blog.</p> <!-- 불필요한 공백 제거 -->
+    </div>
+</body>
+</html>
